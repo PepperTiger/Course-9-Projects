@@ -1,0 +1,30 @@
+---
+title: "Shiny Application and Reproductible Pitch"
+author: "Paul Beuran"
+date: "29/11/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Shiny Application
+
+The application is a displayer of normal distribution with user's mean and standard deviation input.
+
+## How to use ?
+
+ * Go to the application website
+ * Use the sliders to define the mean, standard deviation and window of the x-axis
+ * Look at the bell-curves moving in front of your eyes !
+ 
+## Example
+
+```{r cars, echo = TRUE}
+x = seq(-5, 5, by=0.1)
+y = dnorm(x, mean=0, sd=1)
+plot(x, y, type="l")
+```
+
+## Thanks !

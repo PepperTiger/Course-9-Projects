@@ -1,0 +1,23 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Paul Beuran"
+date: "28/11/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## R Markdown Presentation
+
+Here's a text slide !
+
+## Plotly
+
+Here's a plot slide !
+
+```{r plotly, message=FALSE}
+plot_ly(mtcars, x=~wt, y=~mpg)
+```

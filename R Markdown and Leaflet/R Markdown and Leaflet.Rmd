@@ -1,0 +1,27 @@
+---
+title: "R Markdown and Leaflet"
+author: "Paul Beuran"
+date: "28/11/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r leaflet}
+library(leaflet)
+
+md_cities <-data.frame(name = c("Paris", "Lille", "Lyon", "Bordeaux","Marseille"),
+                       pop =c(2187526, 232787, 513275, 249712, 861635),
+                       lat =c(48.8534, 50.6333, 45.75, 44.8333, 43.3),
+                       lng =c(2.3488, 3.0667, 4.85, -0.5667, 5.4))
+
+md_cities %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircles(weight = 1, radius = sqrt(md_cities$pop) * 30)
+
+```
